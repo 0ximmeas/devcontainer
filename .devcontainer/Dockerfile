@@ -28,22 +28,26 @@ RUN git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.14.0 \
 # Install rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env
 
-# # Install nvm, yarn, npm, pnpm
+# Install nvm, yarn, npm, pnpm
 RUN curl -o- https://raw.githubusercontent.com/devcontainers/features/main/src/node/install.sh | sudo bash
 
-# # Install solc-select
+# Install solc-select
 RUN pipx install solc-select
 
-# # Install slither
+# Install slither
 RUN pipx install slither-analyzer
 
-# # install Medusa (crytic-compile)
+# install Medusa (crytic-compile)
 RUN pipx install crytic-compile
 
-# ## Foundry framework
+# Foundry framework
 RUN curl -L https://foundry.paradigm.xyz | zsh
 RUN foundryup
 
-# # # Clean up
+# Install Aderyn
+RUN curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | zsh
+RUN cyrfinup
+
+# Clean up
 RUN sudo apt-get autoremove -y && sudo apt-get clean -y
 
