@@ -46,7 +46,7 @@ RUN foundryup
 
 # Install Aderyn
 RUN curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | zsh
-RUN cyrfinup
+RUN cyfrinup
 
 # Clean up
 RUN sudo apt-get autoremove -y && sudo apt-get clean -y
