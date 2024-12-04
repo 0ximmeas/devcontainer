@@ -44,8 +44,8 @@ RUN pipx install crytic-compile
 RUN curl -L https://foundry.paradigm.xyz | zsh
 RUN foundryup
 
-# Install Aderyn
-RUN curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | zsh
+# Install Aderyn (my local link to fix an installation issue with zsh)
+RUN curl -L https://raw.githubusercontent.com/0ximmeas/aderyn/dev/cyfrinup/install | zsh
 RUN cyfrinup
 
 # Clean up
