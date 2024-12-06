@@ -45,7 +45,7 @@ RUN curl -L https://foundry.paradigm.xyz | zsh
 RUN foundryup
 
 # Install Aderyn (my local link to fix an installation issue with zsh)
-RUN curl -L https://raw.githubusercontent.com/0ximmeas/aderyn/dev/cyfrinup/install | zsh
+RUN curl -L https://raw.githubusercontent.com/0ximmeas/aderyn/refs/heads/fix/install-to-work-with-non-interactive-zsh-shells/cyfrinup/install | zsh
 RUN cyfrinup
 
 # Clean up
